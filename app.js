@@ -18,6 +18,10 @@ app.get('/contacto', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/views/contacto.html'));
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'src/views/login.html'));
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () =>{
     console.log('Servidor corriendo en el puerto ${3000}')
