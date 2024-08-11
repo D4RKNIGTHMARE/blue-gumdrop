@@ -8,6 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname, 'src/views')));
 
 app.get('/', (req, res) =>{
     res.sendFile(path.join(__dirname, 'src/views/index.html'));
@@ -15,26 +16,6 @@ app.get('/', (req, res) =>{
 
 app.get('/contacto', (req, res) => {
     res.sendFile(path.join(__dirname, 'src/views/contacto.html'));
-});
-
-app.get('/portafolio', (req, res) =>{
-    res.sendFile(path.join(__dirname, '/src/views/portafolio.html'));
-});
-
-app.get('/proceso', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/views/proceso.html'));
-});
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/views/login.html'));
-});
-
-app.get('/registro', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/views/registro.html'));
-});
-
-app.get('/servicios', (req, res) => {
-    res.sendFile(path.join(__dirname, 'src/views/servicios.html'));
 });
 
 const PORT = process.env.PORT || 3000;
