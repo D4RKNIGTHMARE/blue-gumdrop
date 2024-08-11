@@ -12,10 +12,23 @@ header {
     text-align: center;
 }
 
+header h1{
+    margin: 0;
+}
+
+nav{
+    margin-top: 10px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover{
+    text-decoration: underline;
 }
 
 main {
